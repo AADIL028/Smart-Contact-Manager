@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: base( ~{::title}, ~{::#content},~{})}">
+
+<head>
+    <title th:text="${loggedInUser.name}+' | Dashboard'">Profile page</title>
+</head>
+
+<body>
+    <div id="content">
+
+        <!-- sidebar -->
+        <div th:if="${loggedInUser}">
+            <div th:replace="~{user/sidebar :: sidebar}"></div>
+        </div>
+
+        <!-- content -->
+        <div class="sm:pl-64 pt-20">
+            <div class="flex-1 p-6">
+                <div class="mb-6 text-center">
+                    <h1 class="text-4xl font-bold mb-4">Dashboard</h1>
+                    <p class="text-lg">Welcome to your dashboard. Here you can view your contact statistics and manage
+                        your account.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-white dark:text-white dark:bg-gray-700 p-6 rounded shadow-md">
+                        <h2 class="text-2xl font-bold mb-4">Total Contacts</h2>
+                        <p class="text-4xl font-semibold">150</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white dark:text-white dark:bg-gray-700 p-6 rounded shadow-md">
+                        <h2 class="text-2xl font-bold mb-4">New Contacts</h2>
+                        <p class="text-4xl font-semibold">10</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white dark:text-white dark:bg-gray-700 p-6 rounded shadow-md">
+                        <h2 class="text-2xl font-bold mb-4">Upcoming Birthdays</h2>
+                        <p class="text-4xl font-semibold">5</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-white dark:text-white dark:bg-gray-700 p-6 rounded shadow-md">
+                        <h2 class="text-2xl font-bold mb-4">Recent Activities</h2>
+                        <p class="text-4xl font-semibold">20</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+</body>
+
+</html>

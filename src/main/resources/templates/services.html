@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: base( ~{::title}, ~{::#content},~{})}">
+
+<head>
+    <title>Services page</title>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Welcome to services page.</h1>
+        <div class="container mx-auto px-14 py-6">
+            <div id="services" class="my-10 text-center">
+                <h1 class="text-5xl font-bold mb-4">Our Services</h1>
+                <p class="text-lg mb-6">Explore the range of services we offer to manage your contacts efficiently.</p>
+            </div>
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-600 p-6 rounded shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">Contact Management</h2>
+                    <p class="text-lg mb-4">Keep all your contacts organized in one place with our efficient management system.</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Learn More</button>
+                </div>
+                <div class="bg-white dark:bg-gray-600 p-6 rounded shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">Automated Updates</h2>
+                    <p class="text-lg mb-4">Stay up-to-date with automated updates and reminders for all your contacts.</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Learn More</button>
+                </div>
+                <div class="bg-white dark:bg-gray-600 p-6 rounded shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">Data Security</h2>
+                    <p class="text-lg mb-4">Ensure the security of your contact data with our robust protection measures.</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Learn More</button>
+                </div>
+                <div class="bg-white dark:bg-gray-600 p-6 rounded shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">Integration</h2>
+                    <p class="text-lg mb-4">Easily integrate with other tools and platforms for seamless contact management.</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Learn More</button>
+                </div>
+                <div class="bg-white dark:bg-gray-600 p-6 rounded shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">Customization</h2>
+                    <p class="text-lg mb-4">Customize your contact manager to fit your specific needs and preferences.</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Learn More</button>
+                </div>
+                <div class="bg-white dark:bg-gray-600 p-6 rounded shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">24/7 Support</h2>
+                    <p class="text-lg mb-4">Get round-the-clock support to help you with any issues or questions.</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

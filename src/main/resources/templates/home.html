@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: base( ~{::title}, ~{::#content},~{})}">
+
+<head>
+    <title>Home page</title>
+</head>
+
+<body>
+    <div id="content">
+
+        <div class="container mx-auto px-14 py-14">
+            <div id="home" class="my-10 text-center">
+                <h1 class="text-5xl font-bold mb-4">Welcome to Smart Contact Manager</h1>
+                <p class="text-lg mb-6">Manage your contacts efficiently and securely.</p>
+                <button
+                    class="bg-gray-600 dark:bg-blue-600 text-white px-6 py-3 rounded hover:bg-gray-700 dark:hover:bg-blue-700">Get
+                    Started</button>
+            </div>
+
+            <div class="my-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white dark:bg-gray-600 p-6 rounded shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">Why Choose Us?</h2>
+                    <p class="text-lg">Smart Contact Manager offers a user-friendly interface, robust security features,
+                        and seamless integration with other tools to help you manage your contacts with ease.</p>
+                </div>
+                <div class="bg-white dark:bg-gray-600 p-6 rounded shadow-md">
+                    <h2 class="text-2xl font-bold mb-4">Features</h2>
+                    <ul class="list-disc list-inside">
+                        <li class="text-lg">Easy contact management</li>
+                        <li class="text-lg">Secure data storage</li>
+                        <li class="text-lg">Quick search and filter options</li>
+                        <li class="text-lg">Integration with email and messaging apps</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="my-10 bg-gray-600 dark:bg-gray-600 text-white p-6 rounded shadow-md text-center">
+                <h2 class="text-2xl font-bold mb-4">Join Us Today</h2>
+                <p class="text-lg mb-6">Become a part of our community and start managing your contacts efficiently.</p>
+                <a th:href="@{'/register'}"
+                    class="bg-slate-400 hover:bg-slate-500 dark:bg-blue-600 text-white dark:text-white px-6 py-3 rounded dark:hover:bg-blue-700">Sign
+                    Up Now</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: base( ~{::title}, ~{::#content},~{})}">
+
+<head>
+    <title>Error page</title>
+</head>
+
+<body>
+    <div id="content">
+        <div class="md:w-1/2 text-center mx-auto">
+            <div th:replace="~{message::messagebox}"></div>
+            <a href="/login" class="bg-gray-700 text-white px-3 py-2 dark:bg-blue-700 dark:text-white rounded">
+                Login
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

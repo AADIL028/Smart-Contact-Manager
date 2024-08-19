@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="light" lang="en" th:fragment="base(title,content,script)" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:replace="${title}">SCM</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link data-th-href="@{/css/output.css}" rel="stylesheet">
+    <link data-th-href="@{/css/style.css}" rel="stylesheet">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 dark:text-white">
+    <!-- common header -->
+    <div th:if="${loggedInUser}">
+        <div th:replace="~{user/user_navbar :: user-navbar}"></div>
+    </div>
+
+    <div th:unless="${loggedInUser}">
+        <div th:replace="~{navbar :: navbar}"></div>
+    </div>
+    <!-- Dynamic main content -->
+    <div class="p-4">
+        <section th:replace="${content}">
+        </section>
+    </div>
+
+    <!-- Common flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <!-- sweet alert for pop-ups -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script th:src="@{'/js/script.js'}"></script>
+    <!-- Dynamic JS -->
+    <th:block th:replace="${script}"></th:block>
+</body>
+
+</html>
